@@ -1,0 +1,1 @@
+// Music route placeholder
