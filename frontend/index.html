@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SteheStudio AI Music Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎵 SteheStudio AI Music Generator</h1>
+
+    <form id="musicForm">
+      <label for="lyrics">Custom Lyrics (Max 3000 words):</label>
+      <textarea id="lyrics" rows="6" required></textarea>
+
+      <label for="genre">Genre:</label>
+      <select id="genre">
+        <option value="Afrobeats">Afrobeats</option>
+        <option value="Amapiano">Amapiano</option>
+        <option value="Gospel">Gospel</option>
+        <option value="Ululating">Ululating</option>
+        <option value="Whistling">Whistling</option>
+        <option value="Gumboots">Gumboots</option>
+      </select>
+
+      <label for="mood">Mood:</label>
+      <input id="mood" type="text" placeholder="Joyful, Energetic, etc." required/>
+
+      <label for="duration">Duration (e.g. 4 minutes):</label>
+      <input id="duration" type="text" value="4 minutes" required/>
+
+      <button type="submit">Generate Music</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </div>
+
+  <script src="music.js"></script>
+</body>
+</html>
