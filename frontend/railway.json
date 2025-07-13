@@ -1,0 +1,8 @@
+{
+  "build": {
+    "root": "frontend",
+    "buildCommand": "echo 'no build'",
+    "startCommand": "",
+    "outputDirectory": "/"
+  }
+}
