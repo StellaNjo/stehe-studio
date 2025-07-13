@@ -1,40 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SteheStudio AI Music Generator</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>SteheStudio - AI Music Generator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>🎵 SteheStudio AI Music Generator</h1>
+  <header>
+    <h1>SteheStudio 🎶</h1>
+    <p>Create your custom African-inspired AI music</p>
+  </header>
 
-    <form id="musicForm">
-      <label for="lyrics">Custom Lyrics (Max 3000 words):</label>
-      <textarea id="lyrics" rows="6" required></textarea>
-
+  <main>
+    <form id="music-form">
       <label for="genre">Genre:</label>
-      <select id="genre">
-        <option value="Afrobeats">Afrobeats</option>
-        <option value="Amapiano">Amapiano</option>
-        <option value="Gospel">Gospel</option>
-        <option value="Ululating">Ululating</option>
-        <option value="Whistling">Whistling</option>
-        <option value="Gumboots">Gumboots</option>
+      <select id="genre" name="genre" required>
+        <option value="">Select a genre</option>
+        <option>Afrobeats</option>
+        <option>Amapiano</option>
+        <option>Ululating</option>
+        <option>Gumboots Sound</option>
+        <option>Whistling</option>
+        <option>Afro-gospel</option>
+        <option>Afro-choir</option>
+        <option>Kwela</option>
+        <option>Zim-gospel</option>
+        <option>Congolese Rumba</option>
+        <option>Sungura</option>
+        <option>Choir</option>
+        <option>Dance</option>
+        <option>Dancehall</option>
+        <option>Disco</option>
+        <option>House</option>
+        <option>Deep House</option>
+        <option>Afro-house</option>
+        <option>EDM</option>
+        <option>Band</option>
+        <option>Girl Group</option>
+        <option>R&B</option>
+        <option>A Capella</option>
+        <option>Pop</option>
+        <option>K-Pop</option>
+        <option>J-Pop</option>
+        <option>Korean Afro Funk</option>
+        <option>Melody</option>
+        <option>Funk</option>
+        <option>Avant-pop</option>
+        <option>Story Telling</option>
+        <option>Reggae</option>
+        <option>Smooth Reggae</option>
+        <option>Reggaeton</option>
+        <option>Jamaican Music</option>
+        <option>Children Sing Along</option>
+        <option>Tango</option>
+        <option>Country</option>
+        <option>Orchestra</option>
+        <option>Gospel</option>
+      </select>
+
+      <label for="singer">Singer Type:</label>
+      <select id="singer" name="singer" required>
+        <option value="">Choose singer type</option>
+        <option>Male Voice</option>
+        <option>Female Voice</option>
+        <option>Duet</option>
+        <option>Kids Voice</option>
+        <option>Mixed Group</option>
+        <option>Choir</option>
       </select>
 
       <label for="mood">Mood:</label>
-      <input id="mood" type="text" placeholder="Joyful, Energetic, etc." required/>
+      <input type="text" id="mood" name="mood" placeholder="e.g., joyful, spiritual, mellow" required>
 
-      <label for="duration">Duration (e.g. 4 minutes):</label>
-      <input id="duration" type="text" value="4 minutes" required/>
+      <label for="duration">Duration (minutes):</label>
+      <input type="number" id="duration" name="duration" min="1" max="10" value="4" required>
+
+      <label for="lyrics">Custom Lyrics (max 3000 characters):</label>
+      <textarea id="lyrics" name="lyrics" maxlength="3000" placeholder="Write your custom lyrics here..." rows="6"></textarea>
 
       <button type="submit">Generate Music</button>
     </form>
 
-    <div id="result" class="result-box"></div>
-  </div>
+    <section id="preview">
+      <h2>🎧 Preview Your AI Music</h2>
+      <audio id="audio-player" controls></audio>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SteheStudio. All rights reserved.</p>
+  </footer>
 
   <script src="music.js"></script>
 </body>
