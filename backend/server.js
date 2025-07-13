@@ -4,7 +4,9 @@ const bodyParser = require('body-parser');
 const musicRoutes = require('./routes/music');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+
+// ✅ Use the dynamic PORT from Railway
+const PORT = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -14,7 +16,7 @@ app.get('/', (req, res) => {
   res.send('SteheStudio API is running 🎵');
 });
 
-// ✅ Only one listen call
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
