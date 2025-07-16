@@ -1,7 +1,5 @@
 {
   "build": {
-    "builder": "staticfile",
-    "buildCommand": "echo 'no build'",
-    "outputDirectory": "."
+    "builder": "staticfile"
   }
 }
