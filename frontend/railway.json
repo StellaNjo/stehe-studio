@@ -1,8 +1,7 @@
 {
   "build": {
-    "root": "frontend",
+    "builder": "staticfile",
     "buildCommand": "echo 'no build'",
-    "startCommand": "",
-    "outputDirectory": "/"
+    "outputDirectory": "."
   }
 }
